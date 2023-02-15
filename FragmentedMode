@@ -1,0 +1,1049 @@
+local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+local Creepyambience = Instance.new("Sound", workspace)
+
+		Creepyambience.SoundId = "rbxassetid://9114625745"		Creepyambience:Play()
+
+		Creepyambiencd.Volume = 2.4
+
+-- Screech
+
+coroutine.wrap(function()
+
+while true do
+
+local screechchance = math.random(30,60)
+
+wait(screechchance)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/uLMymFsz"))()
+
+end
+
+end)()
+
+-- Deergod
+
+coroutine.wrap(function()
+
+while true do
+
+wait(150)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+-- Create entity
+
+local entityTable = Spawner.createEntity({
+
+    CustomName = "Deergod", -- Custom name of your entity
+
+    Model = "rbxassetid://11393625763", -- Can be GitHub file or rbxassetid
+
+    Speed = 30, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 4, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 60,
+
+    BackwardsMovement = false,
+
+    BreakLights = true,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        4, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 1,
+
+        WaitTime = 1,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {2.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        100, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        true, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://5577595111", -- Image1 url
+
+            Image2 = "rbxassetid://10657365561", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                4903742660, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                3537873683, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(0, 255, 255), -- Color
+
+            },
+
+            Tease = {
+
+                true, -- Enabled/Disabled
+
+                Min = 2,
+
+                Max = 2,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"You died to who you call Deergod...", "Hiding will not help you too much.", "Try running!"}, -- Custom death message
+
+})
+
+-----[[  Debug -=- Advanced  ]]-----
+
+entityTable.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityStartMoving = function()
+
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "I hear something, I need to hide.")
+
+end
+
+entityTable.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity has finished rebound:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity:", entityTable, "has entered room:", room)
+
+end
+
+entityTable.Debug.OnLookAtEntity = function()
+
+    print("Player has looked at entity:", entityTable)
+
+end
+
+entityTable.Debug.OnDeath = function()
+
+    warn("Player has died.")
+
+end
+
+------------------------------------
+
+-- Run the created entity
+
+Spawner.runEntity(entityTable)
+
+end
+
+end)()
+
+-- Silence
+
+coroutine.wrap(function()
+
+while true do
+
+wait(236)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+-- Create entity
+
+local entityTable = Spawner.createEntity({
+
+    CustomName = "Silence", -- Custom name of your entity
+
+    Model = "rbxassetid://11616516367", -- Can be GitHub file or rbxassetid
+
+    Speed = 90, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 6, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 40,
+
+    BackwardsMovement = false,
+
+    BreakLights = false,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        6, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 1,
+
+        WaitTime = 1,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {2.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        100, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        true, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://10483855823", -- Image1 url
+
+            Image2 = "rbxassetid://10483999903", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                4903742660, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                3537873683, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(0, 255, 255), -- Color
+
+            },
+
+            Tease = {
+
+                true, -- Enabled/Disabled
+
+                Min = 2,
+
+                Max = 2,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"You died to who you call Silence...", "Pay attention to his scream.", "When you know it is coming, Hide!"}, -- Custom death message
+
+})
+
+-----  Debug -=- Advanced  -----
+
+entityTable.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityStartMoving = function()
+
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "I hear something, I need to hide.")
+
+end
+
+entityTable.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity has finished rebound:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity:", entityTable, "has entered room:", room)
+
+end
+
+entityTable.Debug.OnLookAtEntity = function()
+
+    print("Player has looked at entity:", entityTable)
+
+end
+
+entityTable.Debug.OnDeath = function()
+
+    warn("Player has died.")
+
+end
+
+------------------------------------
+
+-- Run the created entity
+
+Spawner.runEntity(entityTable)
+
+end
+
+end)()
+
+-- Rebound
+
+coroutine.wrap(function()
+
+while true do
+
+wait(169)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+local Reboundsound = Instance.new("Sound", workspace)
+
+		Reboundsound.SoundId = "rbxassetid://9125713501"
+
+		Reboundsound:Play()
+
+		Reboundsound.Volume = 6
+
+ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+
+local entityTable = Spawner.createEntity({
+
+    CustomName = "Rebound", -- Custom name of your entity
+
+    Model = "rbxassetid://11459817091", -- Can be GitHub file or rbxassetid
+
+    Speed = 200, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 4, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 30,
+
+    BackwardsMovement = false,
+
+    BreakLights = false,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        3.5, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 3,
+
+        WaitTime = 1,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {2.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        150, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        true, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://11862656491", -- Image1 url
+
+            Image2 = "rbxassetid://11862656491", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                12459500028, -- SoundId
+
+                { Volume = 4 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                12453825627, -- SoundId
+
+                { Volume = 6 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(0, 255, 255), -- Color
+
+            },
+
+            Tease = {
+
+                true, -- Enabled/Disabled
+
+                Min = 2,
+
+                Max = 2,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"You died to Rebound...", "It is a fast entity.", "Use what you learned from Ambush!"}, -- Custom death message
+
+})
+
+-----[[  Debug -=- Advanced  ]]-----
+
+entityTable.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityStartMoving = function()
+
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, 'I hear something, I need to hide.')
+
+end
+
+entityTable.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity has finished rebound:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity:", entityTable, "has entered room:", room)
+
+end
+
+entityTable.Debug.OnLookAtEntity = function()
+
+    print("Player has looked at entity:", entityTable)
+
+end
+
+entityTable.Debug.OnDeath = function()
+
+    warn("Player has died.")
+
+end
+
+------------------------------------
+
+-- Run the created entity
+
+Spawner.runEntity(entityTable)
+
+end
+
+end)()
+
+-- Depth
+
+coroutine.wrap(function()
+
+while true do
+
+wait(200)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+-- Create entity
+
+local entityTable = Spawner.createEntity({
+
+    CustomName = "Depth", -- Custom name of your entity
+
+    Model = "rbxassetid://11768107001", -- Can be GitHub file or rbxassetid
+
+    Speed = 250, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 4, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 50,
+
+    BackwardsMovement = false,
+
+    BreakLights = true,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        6, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 1,
+
+        WaitTime = 1,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {2.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        100, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        true, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://5577595111", -- Image1 url
+
+            Image2 = "rbxassetid://10657365561", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                4903742660, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                3537873683, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(0, 255, 255), -- Color
+
+            },
+
+            Tease = {
+
+                true, -- Enabled/Disabled
+
+                Min = 2,
+
+                Max = 2,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"You died to who you call Depth...", "Hes cousin of Ambush.", "Try hiding!"}, -- Custom death message
+
+})
+
+-----[[  Debug -=- Advanced  ]]-----
+
+entityTable.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityStartMoving = function()
+
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "I hear something, I need to hide.")
+
+end
+
+entityTable.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity has finished rebound:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity:", entityTable, "has entered room:", room)
+
+end
+
+entityTable.Debug.OnLookAtEntity = function()
+
+    print("Player has looked at entity:", entityTable)
+
+end
+
+entityTable.Debug.OnDeath = function()
+
+    warn("Player has died.")
+
+end
+
+------------------------------------
+
+-- Run the created entity
+
+Spawner.runEntity(entityTable)
+
+end
+
+end)()
+
+-- Stretcher
+
+coroutine.wrap(function()
+
+while true do
+
+wait(278)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+-- Create entity
+
+local entityTable = Spawner.createEntity({
+
+    CustomName = "Stretcher", -- Custom name of your entity
+
+    Model = "rbxassetid://11347853954", -- Can be GitHub file or rbxassetid
+
+    Speed = 280, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 4, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 50,
+
+    BackwardsMovement = false,
+
+    BreakLights = true,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        6, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 3,
+
+        WaitTime = 1,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {2.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        230, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        true, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://5577595111", -- Image1 url
+
+            Image2 = "rbxassetid://10657365561", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                4903742660, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                3537873683, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(0, 255, 187), -- Color
+
+            },
+
+            Tease = {
+
+                true, -- Enabled/Disabled
+
+                Min = 2,
+
+                Max = 2,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"You died to who you call Stretcher...", "It is a fast entiry.", "Usexwhat you learned from Rush and Ambush!"}, -- Custom death message
+
+})
+
+-----[[  Debug -=- Advanced  ]]-----
+
+entityTable.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityStartMoving = function()
+
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "I hear something, I need to hide.")
+
+end
+
+entityTable.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity has finished rebound:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity:", entityTable, "has entered room:", room)
+
+end
+
+entityTable.Debug.OnLookAtEntity = function()
+
+    print("Player has looked at entity:", entityTable)
+
+end
+
+entityTable.Debug.OnDeath = function()
+
+    warn("Player has died.")
+
+end
+
+------------------------------------
+
+-- Run the created entity
+
+Spawner.runEntity(entityTable)
+
+end
+
+end)()
+
+-- RedBite
+
+coroutine.wrap(function()
+
+while true do
+
+wait(326)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+local Redsound = Instance.new("Sound", workspace)
+
+		Redsound.SoundId = "rbxassetid://9125712561"
+
+		Redsound:Play()
+
+		Redsound.Volume = 6
+
+-- Create entity
+
+local entityTable = Spawner.createEntity({
+
+    CustomName = "Trip", -- Custom name of your entity
+
+    Model = "rbxassetid://12473612190", -- Can be GitHub file or rbxassetid
+
+    Speed = 500, -- Percentage, 100 = default Rush speed
+
+    DelayTime = 4, -- Time before starting cycles (seconds)
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 29,
+
+    BackwardsMovement = false,
+
+    BreakLights = true,
+
+    FlickerLights = {
+
+        true, -- Enabled/Disabled
+
+        0.5, -- Time (seconds)
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 3,
+
+        WaitTime = 1,
+
+    },
+
+    CamShake = {
+
+        true, -- Enabled/Disabled
+
+        {2.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+
+        270, -- Shake start distance (from Entity to you)
+
+    },
+
+    Jumpscare = {
+
+        true, -- Enabled/Disabled
+
+        {
+
+            Image1 = "rbxassetid://5577595111", -- Image1 url
+
+            Image2 = "rbxassetid://10657365561", -- Image2 url
+
+            Shake = true,
+
+            Sound1 = {
+
+                4903742660, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Sound2 = {
+
+                3537873683, -- SoundId
+
+                { Volume = 0.5 }, -- Sound properties
+
+            },
+
+            Flashing = {
+
+                true, -- Enabled/Disabled
+
+                Color3.fromRGB(0, 255, 2), -- Color
+
+            },
+
+            Tease = {
+
+                true, -- Enabled/Disabled
+
+                Min = 2,
+
+                Max = 2,
+
+            },
+
+        },
+
+    },
+
+    CustomDialog = {"You died to Trip...", "Hes similar to Ambush.", "When you hear his scream, hide quick!"}, -- Custom death message
+
+})
+
+-----[[  Debug -=- Advanced  ]]-----
+
+entityTable.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityStartMoving = function()
+
+    firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "I hear something, I need to hide.")
+
+end
+
+entityTable.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity has finished rebound:", entityTable)
+
+end
+
+entityTable.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity:", entityTable, "has entered room:", room)
+
+end
+
+entityTable.Debug.OnLookAtEntity = function()
+
+    print("Player has looked at entity:", entityTable)
+
+end
+
+entityTable.Debug.OnDeath = function()
+
+    warn("Player has died.")
+
+end
+
+------------------------------------
+
+-- Run the created entity
+
+Spawner.runEntity(entityTable)
+
+end
+
+end)()
