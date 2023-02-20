@@ -94,13 +94,9 @@ end)()
 
 coroutine.wrap(function()
 
-while true do
-
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
 loadstring(game:HttpGet("https://pastefy.ga/ivPRyQ4H/raw"))()
-
-end
 
 end)()
 
