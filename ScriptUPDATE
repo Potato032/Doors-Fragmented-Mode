@@ -1,0 +1,167 @@
+local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "Credits: Ping, Muhhamad, Nautic, here, and people who made other models. Have fun, made by The Jabiss!")
+
+game.Lighting.FogEnd = "75"
+
+game.Lighting.FogStart = "0"
+
+game.Lighting.FogColor = Color3.fromRGB(0, 0, 50)
+
+game.Workspace.Ambience_Seek.SoundId = "rbxassetid://1848090337"
+
+if game.ReplicatedStorage.GameData.LatestRoom.Value == "50" then
+
+	game.Workspace.Ambience_Seek.SoundId = "rbxassetid://1848156876"end
+
+	
+
+local Creepyambience = Instance.new("Sound", workspace)
+
+		Creepyambience.SoundId = "rbxassetid://9114625745"
+
+		Creepyambience:Play()
+
+		Creepyambience.Volume = 0.4
+
+		Creepyambience.Looped = true
+
+-- Crucifix B
+
+coroutine.wrap(function()
+
+local chance = math.random(1, 5500)
+
+wait(40)
+
+if chance == 1 then
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/Doors/Crucifix.lua'))()
+
+end
+
+end)()
+
+-- Deergod
+
+coroutine.wrap(function()
+
+while true do
+
+wait(1500)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/Rr1zXBxu"))()
+
+end
+
+end)()
+
+-- Hungered
+
+coroutine.wrap(function()
+
+while true do
+
+wait(430)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/y4FVDrPJ"))()
+
+end
+
+end)()
+
+-- Silence
+
+coroutine.wrap(function()
+
+while true do
+
+wait(330)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/s7RKvm8s"))()
+
+end
+
+end)()
+
+-- Rebound
+
+coroutine.wrap(function()
+
+while true do
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastefy.ga/ivPRyQ4H/raw"))()
+
+end
+
+end)()
+
+-- Depth
+
+coroutine.wrap(function()
+
+while true do
+
+wait(165)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/1UnsV4t7"))()
+
+end
+
+end)()
+
+-- BL4C6
+
+coroutine.wrap(function()
+
+while true do
+
+wait(1100)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/qBcyBTz3"))()
+
+end
+
+end)()
+
+-- Ripper
+
+coroutine.wrap(function()
+
+while true do
+
+wait(250)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/H8gMU0Ff"))()
+
+end
+
+end)()
+
+-- Shocker
+
+coroutine.wrap(function()
+
+while true do
+
+wait(20)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/7xbXnrQK"))()
+
+end
+
+end)()
