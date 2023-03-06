@@ -1,2 +1,2 @@
 # Doors-Fragmented-Mode
-Credits to Vynixus, and the people who made the models and other stuff
+Credits to Vynixus, Nautic, and the people who made the models and other stuff
